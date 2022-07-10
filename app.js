@@ -2,11 +2,10 @@ var FfmpegCommand = require("fluent-ffmpeg");
 var open = require("open");
 
 const convertToMp3 = async (videoFilePath, audioDestinationPath) => {
-  console.log("fish");
-
-  var command = new FfmpegCommand(videoFilePath);
-
-  await command.toFormat("mp3").save(audioDestinationPath);
+  return new Promise((resolve, reject) => {
+    var command = new FfmpegCommand(videoFilePath);
+    command.toFormat("mp3").save(audioDestinationPath);
+  });
 };
 
 const express = require("express");
