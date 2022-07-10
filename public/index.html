@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video to MP3 Converter</title>
+  </head>
+  <body>
+    <div
+      style="
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      "
+    >
+      <h1>Video to MP3 Converter</h1>
+      <form action="/convert">
+        <div style="margin: 5px">
+          <label style="padding-right: 5px">Select video file:</label>
+          <input name="videoFilePath" type="file" />
+        </div>
+        <div style="margin: 5px">
+          <label>Name of outputed mp3 file:</label>
+          <input name="outputName" />
+        </div>
+        <div style="margin: 5px">
+          <button id="convertButton" type="submit">Convert Now</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

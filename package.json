@@ -1,0 +1,15 @@
+{
+  "name": "video-audio-converter",
+  "version": "1.0.0",
+  "main": "index.js",
+  "bin": "./app.js",
+  "assets": [
+    "public/*"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.1",
+    "fluent-ffmpeg": "^2.1.2",
+    "open": "^8.4.0"
+  }
+}
