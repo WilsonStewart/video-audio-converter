@@ -4,7 +4,16 @@ var open = require("open");
 const convertToMp3 = async (videoFilePath, audioDestinationPath) => {
   return new Promise((resolve, reject) => {
     var command = new FfmpegCommand(videoFilePath);
-    command.toFormat("mp3").save(audioDestinationPath);
+    command
+      .toFormat("mp3")
+      .save(audioDestinationPath)
+      .on("end", () => {
+        console.log(`Audio ${i} converted`);
+        return resolve();
+      })
+      .on("err", (err) => {
+        return reject(err);
+      });
   });
 };
 
