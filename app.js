@@ -8,7 +8,7 @@ const convertToMp3 = async (videoFilePath, audioDestinationPath) => {
       .toFormat("mp3")
       .save(audioDestinationPath)
       .on("end", () => {
-        console.log(`Audio ${i} converted`);
+        console.log(`Audio converted`);
         return resolve();
       })
       .on("err", (err) => {
